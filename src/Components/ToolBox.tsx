@@ -110,6 +110,9 @@ export const ToolBox = memo(() => {
       <ToolItem functionality={"Select"}>
         <Icons.Select />
       </ToolItem>
+      <ToolItem functionality={"RectangleWithSeats"}>
+        RT
+      </ToolItem>
     </div>
   );
 });

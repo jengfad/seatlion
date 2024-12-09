@@ -8,6 +8,7 @@ import {
 
 export const Tool = {
   Rectangle: "cursor-draw",
+  RectangleWithSeats: "cursor-select",
   Sticker: "cursor-select",
   Circle: "cursor-draw",
   Select: "cursor-select",
@@ -88,7 +89,7 @@ export type Shape =
     }
   | {
       id: string;
-      type: "table";
+      type: "rectangleWithSeats";
       props: any;
     };
 

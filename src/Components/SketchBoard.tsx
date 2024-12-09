@@ -3,7 +3,7 @@ import { memo } from "react";
 
 import { Collaboration, Resizer } from "Components";
 import useStore from "Store";
-import TableWithSeats from "./Shapes/TableWithSeats";
+import RectangleWithSeats from "./Shapes/RectangleWithSeats";
 
 export const SketchBoard = memo(() => {
   const { board, activeSelection } = useStore();
@@ -35,8 +35,8 @@ export const SketchBoard = memo(() => {
             case "connector":
               return <Connector key={id} id={id} {...props} />;
 
-            case "table":
-              return <TableWithSeats key={id} id={id} {...props} />;
+            case "rectangleWithSeats":
+              return <RectangleWithSeats numberOfSeats={15} />;
 
             default:
               return <></>;

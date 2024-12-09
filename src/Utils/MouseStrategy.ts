@@ -616,6 +616,7 @@ export class DrawCustomShape extends Strategy {
     });
   };
 
+  // test commit - ignore
   public handleMouseUp = () => {
     this.isDragging = false;
     const { setToolInUseName, setWhiteboardCursor } = useStore.getState();

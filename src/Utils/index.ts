@@ -6,6 +6,7 @@ export {
   DrawCircle,
   DrawCustomShape,
   DrawRectangle,
+  DrawRectangleWithSeats,
   Text,
   ArrowHandler,
 } from "./MouseStrategy";

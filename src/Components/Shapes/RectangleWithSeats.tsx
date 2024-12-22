@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const RectangleWithSeats = ({ numberOfSeats, seatWidth = 30, seatHeight = 30, gap = 5 }) => {
+export interface RectangleWithSeatsProps extends React.SVGProps<SVGRectElement> {
+  id: string;
+  numberOfSeats: number;
+}
+
+const RectangleWithSeats = memo((props: RectangleWithSeatsProps) => {
+  const { id, numberOfSeats, x, y } = props;
   const rows = 2;
+  const seatWidth = 30;
+  const seatHeight = 30;
+  const gap = 5;
   const columns = Math.ceil(numberOfSeats / rows);
   const rectWidth = columns * (seatWidth + gap) - gap;
   const rectHeight = rows * (seatHeight + gap) - gap;
@@ -27,10 +36,16 @@ const RectangleWithSeats = ({ numberOfSeats, seatWidth = 30, seatHeight = 30, ga
   }
 
   return (
-    <svg width={rectWidth} height={rectHeight} style={{ border: '2px solid black' }}>
+    <svg 
+      x={x}
+      y={y}
+      id={id}
+      width={rectWidth} 
+      height={rectHeight} 
+      style={{ border: '2px solid black' }}>
       {seats}
     </svg>
   );
-};
+});
 
 export default RectangleWithSeats;

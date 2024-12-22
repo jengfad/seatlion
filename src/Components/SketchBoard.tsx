@@ -36,7 +36,7 @@ export const SketchBoard = memo(() => {
               return <Connector key={id} id={id} {...props} />;
 
             case "rectangleWithSeats":
-              return <RectangleWithSeats numberOfSeats={15} />;
+              return <RectangleWithSeats key={id} id={id} {...props} />;
 
             default:
               return <></>;
